@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="This is a website.">
+	<link rel="stylesheet" type="text/css" href="https://www.w3schools.com/w3css/4/w3.css"/>
+	<link rel="stylesheet" type="text/css" href="pi_calc.css"/>
+	<title>Pi (Product) Calculator</title>
+</head>
+<body style="background-color: grey">
+	<center><h1 style="color: white">Pi (Product) Calculator</h1></center>
+
+
+	<div>
+		<div class="grid-container">
+			<div class="item1"><input type="number" id="upper" onchange="piproduct()"></div>
+			<div class="item2">
+				<span style="font-family: 'Times New Roman'; font-size: 300%;">Π</span>
+				<input id="expr" style="width: 46%; height: 50%; vertical-align: middle;" onchange="piproduct()">
+			</div>
+			<div class="item3">n=<input type="number" id="lower" onchange="piproduct()"></div>
+			<div class="itemeq">=</div>
+			<div class="item4" style="font-size: 100%">
+				<!-- <div> -->
+					<textarea readonly id="result" style="min-width: 100%;max-width: 100%;/*width:100%;*/ /*height: 135px;*/ -webkit-box-sizing: border-box;"></textarea>
+				<!-- <div> -->
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+	<script src="https://cdn.jsdelivr.net/npm/nerdamer@latest/nerdamer.core.js" integrity="sha256-z6uun9OtxedR1C9mFMZ3wUegmUf4QVVyLyc5lGK5YH0=" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/nerdamer@latest/Algebra.js" integrity="sha256-tddOwcYmnwwIzzth83+oui6ZafSagUaIcd6vrStDVDU=" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/nerdamer@latest/Calculus.js" integrity="sha256-WmBvDLRzzGj7zLcH1Z0IvRfpS/4B0bIOK+k1zjZ+iNc=" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/nerdamer@latest/Solve.js" integrity="sha256-nxOvSrpehRJ8/h7jBN0Ul9sqoaFI6B3JVtYhoV+NvSY=" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/nerdamer@latest/Extra.js" integrity="sha256-OcaNBP1t4bwP8kG7iCWEpIOFUZGlEEoZjYWQi2HCOT8=" crossorigin="anonymous"></script>
+
+	<script type="text/javascript" src="pi_calc.js"></script>
+</body>
+</html>
