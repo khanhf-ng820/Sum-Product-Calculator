@@ -25,3 +25,17 @@ function sigmasum() {
 		document.getElementById('result').innerHTML = undefined;
 	}
 }
+
+
+let inputs = document.querySelectorAll('input');
+for (let i = 0; i < inputs.length; i++) {
+	inputs[i].addEventListener("keypress", function(event) {
+		// If the user presses the "Enter" key on the keyboard
+		if (event.key === "Enter") {
+			// Cancel the default action, if needed
+			event.preventDefault();
+			// Trigger the button element with a click
+			document.querySelector('button').click();
+		}
+	});
+}

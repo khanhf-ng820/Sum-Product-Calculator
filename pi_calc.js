@@ -1,12 +1,12 @@
-document.getElementById('result').style.height = document.getElementsByClassName('item2')[0].getBoundingClientRect()['height'];
-document.getElementById('result').style.width = document.getElementsByClassName('item4')[0].getBoundingClientRect()['width'];
+// document.getElementById('result').style.height = document.getElementsByClassName('item2')[0].getBoundingClientRect()['height'];
+// document.getElementById('result').style.width = document.getElementsByClassName('item4')[0].getBoundingClientRect()['width'];
 
 
 
-window.addEventListener('resize', function(event) {
-	document.getElementById('result').style.height = document.getElementsByClassName('item2')[0].getBoundingClientRect()['height'];
-	document.getElementById('result').style.width = document.getElementsByClassName('item4')[0].getBoundingClientRect()['width'];
-}, true);
+// window.addEventListener('resize', function(event) {
+// 	document.getElementById('result').style.height = document.getElementsByClassName('item2')[0].getBoundingClientRect()['height'];
+// 	document.getElementById('result').style.width = document.getElementsByClassName('item4')[0].getBoundingClientRect()['width'];
+// }, true);
 
 
 function piproduct() {
@@ -24,4 +24,18 @@ function piproduct() {
 	} catch {
 		document.getElementById('result').innerHTML = undefined;
 	}
+}
+
+
+let inputs = document.querySelectorAll('input');
+for (let i = 0; i < inputs.length; i++) {
+	inputs[i].addEventListener("keypress", function(event) {
+		// If the user presses the "Enter" key on the keyboard
+		if (event.key === "Enter") {
+			// Cancel the default action, if needed
+			event.preventDefault();
+			// Trigger the button element with a click
+			document.querySelector('button').click();
+		}
+	});
 }
